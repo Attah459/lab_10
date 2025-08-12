@@ -57,5 +57,5 @@ input, textarea {
 #errorDisplay {
     background: #ffebee;
     border: 1px solid #ffcdd2;
-    color: red;
+    color: rgb(233, 214, 214);
 }
