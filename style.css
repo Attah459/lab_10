@@ -19,14 +19,15 @@ h1, h2 {
 button {
     padding: 10px 15px;
     border: none;
-    background-color: #091a2d;
-    color: rgb(0, 0, 0);
+    background-color: #d1d9e0; /* lighter gray-blue for contrast */
+    color: black; /* black text */
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b0bec5; /* slightly darker on hover */
 }
 
 form {
