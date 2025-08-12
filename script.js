@@ -45,3 +45,19 @@ xhrBtn.addEventListener("click", () => {
     };
     xhr.send();
 });
+
+postForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const title = document.getElementById("postTitle").value.trim();
+    const body = document.getElementById("postBody").value.trim();
+
+    if (!title || !body) {
+        showError("Please provide both a title and body.");
+        return;
+    }
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, body, userId: 1 })
+    })
