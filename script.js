@@ -28,3 +28,20 @@ fetchBtn.addEventListener("click", () => {
         .then(data => showData(data))
         .catch(err => showError(err.message));
 });
+
+xhrBtn.addEventListener("click", () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/2");
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            const data = JSON.parse(xhr.responseText);
+            showData(data);
+        } else {
+            showError(`Server Error: ${xhr.status}`);
+        }
+    };
+    xhr.onerror = function () {
+        showError("Network Error: Unable to reach server.");
+    };
+    xhr.send();
+});
