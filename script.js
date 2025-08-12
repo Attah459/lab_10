@@ -82,3 +82,15 @@ putForm.addEventListener("submit", e => {
         showError("Please fill in all fields.");
         return;
     }
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", `https://jsonplaceholder.typicode.com/posts/${id}`);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            const data = JSON.parse(xhr.responseText);
+            dataDisplay.innerHTML = `<p>Post updated successfully!</p><pre>${JSON.stringify(data, null, 2)}</pre>`;
+            errorDisplay.textContent = "";
+        } else {
+            showError(`Server Error: ${xhr.status}`);
+        }
+    };
