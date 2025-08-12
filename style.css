@@ -36,6 +36,7 @@ form {
     max-width: 400px;
     margin: 10px auto;
 }
+
 input, textarea {
     padding: 8px;
     border: 1px solid #ccc;
@@ -57,5 +58,5 @@ input, textarea {
 #errorDisplay {
     background: #ffebee;
     border: 1px solid #ffcdd2;
-    color: rgb(233, 214, 214);
+    color: red;
 }
