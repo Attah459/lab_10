@@ -36,3 +36,8 @@ form {
     max-width: 400px;
     margin: 10px auto;
 }
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
