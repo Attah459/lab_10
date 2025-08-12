@@ -48,3 +48,8 @@ input, textarea {
     padding: 10px;
     border-radius: 5px;
 }
+
+#dataDisplay {
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
