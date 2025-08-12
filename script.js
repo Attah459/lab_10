@@ -61,3 +61,11 @@ postForm.addEventListener("submit", e => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, body, userId: 1 })
     })
+        .then(response => {
+            if (!response.ok) throw new Error(`Server Error: ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            dataDisplay.innerHTML = `<p>Post created successfully!</p><pre>${JSON.stringify(data, null, 2)}</pre>`;
+            errorDisplay.textContent = "";
+        })
