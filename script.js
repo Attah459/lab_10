@@ -69,3 +69,5 @@ postForm.addEventListener("submit", e => {
             dataDisplay.innerHTML = `<p>Post created successfully!</p><pre>${JSON.stringify(data, null, 2)}</pre>`;
             errorDisplay.textContent = "";
         })
+        .catch(err => showError(err.message));
+});
