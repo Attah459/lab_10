@@ -53,3 +53,9 @@ input, textarea {
     background: #e8f5e9;
     border: 1px solid #c8e6c9;
 }
+
+#errorDisplay {
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: red;
+}
