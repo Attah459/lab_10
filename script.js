@@ -94,3 +94,9 @@ putForm.addEventListener("submit", e => {
             showError(`Server Error: ${xhr.status}`);
         }
     };
+
+    xhr.onerror = function () {
+        showError("Network Error: Unable to reach server.");
+    };
+    xhr.send(JSON.stringify({ id, title, body, userId: 1 }));
+});
