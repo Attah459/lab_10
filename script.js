@@ -71,3 +71,14 @@ postForm.addEventListener("submit", e => {
         })
         .catch(err => showError(err.message));
 });
+
+putForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const id = document.getElementById("putId").value.trim();
+    const title = document.getElementById("putTitle").value.trim();
+    const body = document.getElementById("putBody").value.trim();
+
+    if (!id || !title || !body) {
+        showError("Please fill in all fields.");
+        return;
+    }
